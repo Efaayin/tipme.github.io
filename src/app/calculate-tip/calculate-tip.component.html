@@ -1,0 +1,21 @@
+<div class="contain">
+    <header>
+        <h1>Tip Calculator</h1>
+    </header>
+
+    <main>
+        <div class="total">
+            <span>Cost ($)</span>
+            <input type="number" [(ngModel)]="cost">
+            <button (click)="calculateTip()" class="btn btn-primary">Calculate Tip</button>
+            <button (click)="reset()" class="btn btn-danger reset">Reset</button>
+        </div>
+        <div 
+            class="tip" 
+            *ngFor="let el of display">
+                <p>Cost: ${{ cost }}</p>
+                <p>Tip to be paid (10% of Cost): ${{ tip }}</p>
+                <p>Total Amount Payable: ${{ amountPayable }}</p>
+        </div>
+    </main>
+</div>
