@@ -30,5 +30,6 @@ export class CalculateTipComponent implements OnInit {
 
   reset() {
     this.display = [];
+    this.cost = 0;
   }
 }
